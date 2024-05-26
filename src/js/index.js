@@ -15,13 +15,11 @@ const debouncedGetReps = debounce(async (evt) => {
   if (evt.target.value !== '') {
     try {
       const res = await getReps(evt.target.value)
-      console.log(res)
       let data = await res.json()
       repsData = data.items
     } catch (err) {
       console.error(err)
     }
-    console.log(repsData)
   } else {
     repsData = null
   }
