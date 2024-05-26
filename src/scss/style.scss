@@ -1,0 +1,93 @@
+$bgColor: #333;
+$text: #fff;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+@font-face {
+  font-family: 'Comic';
+  src: url('../fonts/comic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  padding: 1rem;
+  margin: 0 auto;
+  font-family: Comic, sans-serif;
+  background-color: $bgColor;
+  color: $text;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  max-width: 660px;
+  min-height: 100vh;
+  padding: 60px 80px;
+  background-color: #555;
+}
+
+.search {
+  font-family: inherit;
+  color: #555;
+  background-color: #e3e3e3;
+  height: 70px;
+  padding: 0 20px;
+  vertical-align: middle;
+  font-size: 24px;
+  border: none;
+}
+
+.autocomplete {
+  margin-bottom: 50px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  &__item {
+    min-height: 50px;
+    border: 2px solid #777;
+    border-top: none;
+  }
+}
+
+.favorite-reps {
+  margin-top: auto;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  row-gap: 15px;
+}
+
+.repo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: antiquewhite;
+  color: #555;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  &__delete-btn {
+    border: none;
+    color: red;
+    font-size: 40px;
+    font-weight: 700;
+    background-color: transparent;
+  }
+}
